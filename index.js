@@ -3,6 +3,7 @@ const app = express();
 const port = 3000
 const dados = require('./dados.json');
 const bodyParser = require('body-parser')
+const estudantes = ('./estudantes.json')
 
 app.use(bodyParser.json());
 
@@ -11,6 +12,15 @@ app.get('/pessoas', (req, res) => {
 
 });
 
+app.get('/Estudantes/:aluno', (req, res) => {
+    res.send(estudantes.classe);
+    for (let i = 0; 1 < estudantes.classe.length; i += 1) {
+        if (estudantes.classe[i].aluno == req.params.aluno) {
+            res.send(estudantes.classe[i]);
+        }
+    }
+
+});
 app.post('/pessoas', (req, res) => {
     //inserção no bando
     //Retornar o valor inserido
