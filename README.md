@@ -30,5 +30,7 @@ Diretórios:
   ```
   $ npx sequelize-cli model: generate --name=Tarefa --attributes name;string, desc:string,status:boolean,data:date, dataDeConclusao:date,prioridade:string
 
+  npx sequelize-cli db:migrate
+
   ```
 
